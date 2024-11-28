@@ -1,0 +1,110 @@
+.header {
+    grid-area: header;
+    text-align: end;
+}
+
+.nav{
+    grid-area: nav;
+    background-color: black;
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+}
+
+.main{
+    grid-area: main;
+    height: 150x;
+}
+
+.logo{
+    grid-area: logo;
+}
+
+.footer{
+    grid-area: footer
+}
+
+
+.grid-container{
+    background-color: black;
+    border-color: aqua;
+    border-radius: 5px;
+    padding: 5px;
+    display: grid;
+    /*grid-template-areas: 'header header header header header'
+                         'nav    main   main   main   article'
+                         'nav    footer footer footer footer';*/
+    grid-template-areas: 'logo header header header header'
+                        'nav nav nav nav nav'
+                         'main main  main main main'
+                         'footer footer footer footer footer';
+}
+
+
+.grid-container div{
+    background-color: yellow;
+    border: 2px solid black;
+}
+
+@font-face{
+    font-family: Miguel;
+    src: url("../font/Sevillana-Regular.ttf ");
+}
+
+.empresa{
+    color: black;
+    font-family: "Miguel", sans-serif; 
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: end;
+    align-items: center; 
+}
+
+a {
+    background-color: black; /* Fondo del enlace */
+    color: yellow; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado predeterminado */
+    padding: 5px 10px; /* Espacio interno (dentro del enlace) */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave al pasar el cursor */
+    display: inline-block; /* Permite que el padding funcione correctamente */
+}
+
+a:hover {
+    background-color: yellow; /* Cambia el fondo al pasar el cursor */
+    color: black; /* Cambia el color del texto al pasar el cursor */
+}
+
+#Home{
+    display: none;
+}
+
+#somos{
+    display: none;
+}
+
+#productos{
+    display: none;
+}
+
+#contactanos{
+    display:none;
+}
+
+#Home:target{
+    display: block;
+}
+
+#somos:target{
+    display: block;
+}
+
+#productos:target{
+    display: block;
+}
+
+#contactanos:target{
+    display: block;
+}
